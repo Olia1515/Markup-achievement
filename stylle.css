@@ -61,6 +61,9 @@ header {
   margin-right: auto;
   border: 2px solid red;
 }
+.menu-icon {
+  display: none;
+}
 /*==================================================1section===========================================*/
 
 .main-section {
@@ -71,7 +74,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 800px;
+  min-height: 800px;
 }
 .main-info {
   display: flex;
@@ -80,6 +83,8 @@ header {
 
 .main-img {
   align-self: flex-end;
+  max-width: 656px;
+  width: 100%;
 }
 .main-title {
   font-weight: 500;
@@ -143,11 +148,12 @@ header {
   line-height: 22px;
   color: #95a1bb;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .table {
-  width: 940px;
-  height: 300px;
+  max-width: 940px;
+  min-height: 300px;
   border-collapse: collapse;
 }
 
@@ -182,7 +188,7 @@ td {
 
 .table-footer {
   border: 1px solid #95a1bb;
-  width: 241px;
+  max-width: 241px;
   height: 96px;
   padding: 30px 0;
 }
@@ -352,4 +358,65 @@ input[type="checkbox"],
 input[type="date"],
 select {
   cursor: pointer;
+}
+
+@media (max-width: 1400px) {
+  .main-wrapper {
+    flex-direction: column;
+    min-height: auto;
+  }
+  .main-img {
+    align-self: center;
+  }
+
+  .main-info {
+    align-self: flex-start;
+    margin: 100px 0 80px;
+  }
+  .table {
+    width: 940px;
+  }
+  .table-wrap {
+    overflow-x: auto;
+    width: 100%;
+    max-width: 940px;
+  }
+
+  .create-wrap {
+    flex-direction: column;
+  }
+  .info-text-wrap {
+    margin: 100px 0 70px;
+  }
+  .form {
+    align-self: center;
+  }
+  .acc-text {
+    max-width: unset;
+  }
+}
+@media (max-width: 576px) {
+  .menu {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+
+  .main-title {
+    font-size: 52px;
+    line-height: 60px;
+  }
+
+  .main-info {
+    margin: 60px 0;
+  }
+
+  .create-wrap {
+    gap: 60px;
+  }
+  fieldset {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
 }
