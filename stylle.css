@@ -303,7 +303,7 @@ select {
 .stack,
 fieldset {
   display: flex;
-  gap: 30px;
+  gap: 30px; /**/
 }
 
 .field-wrapper {
